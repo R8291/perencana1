@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Akses Satker</title>
+</head>
+<body>
+  <h2>Akses Satker</h2>
+  <input type="password" id="password" placeholder="Masukkan Password..." />
+  <button onclick="checkPassword()">Buka</button>
+  <div id="result"></div>
+
+  <script>
+    function checkPassword() {
+      const links = {
+        "subang2025": "https://docs.google.com/spreadsheets/d/abcd1234",
+        "karawang2025": "https://docs.google.com/spreadsheets/d/efgh5678"
+      };
+      const pw = document.getElementById('password').value;
+      if (links[pw]) {
+        window.location.href = links[pw];
+      } else {
+        document.getElementById('result').innerText = "Password salah!";
+      }
+    }
+  </script>
+</body>
+</html>
